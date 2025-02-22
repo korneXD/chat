@@ -58,7 +58,7 @@ export default function Home() {
             <div
               key={e.id}
               className={
-                e.id == user.uid
+                e.id == user?.uid
                   ? "flex justify-end items-center w-full h-fit p-2"
                   : "flex justify-start items-center w-full h-fit p-2"
               }

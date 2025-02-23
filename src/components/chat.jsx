@@ -209,7 +209,7 @@ export default function Chatroom({ user, auth }) {
           </div>
         ) : (
           <div className="flex justify-center items-center border-3 max-h-[80vh] rounded-2xl bg-black w-full h-full flex-col gap-3 border-border relative">
-            <div className="flex overflow-x-hidden justify-start items-center flex-col w-full pb-20 border border-white px-4">
+            <div className="flex overflow-x-hidden justify-start items-center flex-col w-full pb-20 px-4">
               {chats?.map((e, i) => (
                 <div
                   key={i + "+" + e.id}

@@ -14,6 +14,7 @@ export default function SignUp({ setAuth }) {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(auth.currentUser, { displayName });
+      toast.success("Signed up successfully!");
     } catch (error) {
       if (email == "" || password == "" || displayName == "")
         toast.error("Missing data!");

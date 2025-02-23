@@ -31,7 +31,7 @@ export default function Home() {
           <SignUp setAuth={setAuth} />
         )
       ) : (
-        <Chatroom user={user} />
+        <Chatroom user={user} auth={auth} />
       )}
     </div>
   );

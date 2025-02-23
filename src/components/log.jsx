@@ -12,13 +12,14 @@ export default function Login({ setAuth }) {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      toast.success("Logged in successfully!");
     } catch (error) {
       if (email == "" && password != "") toast.error("Email required!");
       if (password == "" && email != "") toast.error("Password required!");
       if (email == "" && password == "")
         toast.error("Email and password required!");
+      if (email != "" && password != "") toast.error("User does not exist!");
     }
-    if (email != "" && password != "") toast.error("User does not exist!");
   };
 
   return (
